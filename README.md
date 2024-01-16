@@ -1,8 +1,11 @@
 # Wordpress Atratis
 
 Este projeto consiste de um tema para Wordpress que será utilizado no site da Atratis.
+![Desktop](https://github.com/JoaoPedroGiffoni/projeto-landing-page/assets/130670781/f129f54f-16c4-496f-b7cf-8cdbdab987e6)
+![Mobile](https://github.com/JoaoPedroGiffoni/projeto-landing-page/assets/130670781/f5066eea-acb3-4e7d-8860-86c7e9572aa6)
 
 ## Instalação
+
 
 Para começar é preciso ter feito um clone do projeto, para isso execute o comando:
 
