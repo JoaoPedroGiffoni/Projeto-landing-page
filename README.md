@@ -3,6 +3,8 @@
 Este projeto consiste de um tema para Wordpress que será utilizado no site da Atratis.
 ![Desktop](https://github.com/JoaoPedroGiffoni/projeto-landing-page/assets/130670781/f129f54f-16c4-496f-b7cf-8cdbdab987e6)
 ![Mobile](https://github.com/JoaoPedroGiffoni/projeto-landing-page/assets/130670781/f5066eea-acb3-4e7d-8860-86c7e9572aa6)
+![Mobile-1](https://github.com/JoaoPedroGiffoni/projeto-landing-page/assets/130670781/1f4b0526-6d2a-4a5f-ad06-227d8bd9bfdf)
+
 
 ## Instalação
 
