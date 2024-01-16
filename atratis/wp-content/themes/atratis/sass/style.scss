@@ -617,10 +617,8 @@ footer {
 
 @media screen and (max-width: 768px) {
 
-  body, html {
-    width: 100%;
+  body {
     overflow-x: hidden;
-    margin: 0;
   }
 
   header li {

@@ -21,16 +21,16 @@ define( 'WP_CACHE', true );
 
 // ** Configurações do banco de dados - Você pode pegar estas informações com o serviço de hospedagem ** //
 /** O nome do banco de dados do WordPress */
-define( 'DB_NAME', getenv('MYSQL_DATABASE') );
+define( 'DB_NAME', getenv('ATRATIS_MYSQL_DATABASE') );
 
 /** Usuário do banco de dados MySQL */
-define( 'DB_USER', getenv('MYSQL_USER') );
+define( 'DB_USER', getenv('ATRATIS_MYSQL_USER') );
 
 /** Senha do banco de dados MySQL */
-define( 'DB_PASSWORD', getenv('MYSQL_PASSWORD') );
+define( 'DB_PASSWORD', getenv('ATRATIS_MYSQL_PASSWORD') );
 
 /** Nome do host do MySQL */
-define( 'DB_HOST', getenv('MYSQL_HOST') );
+define( 'DB_HOST', getenv('ATRATIS_MYSQL_HOST') );
 
 /** Charset do banco de dados a ser usado na criação das tabelas. */
 define( 'DB_CHARSET', 'utf8mb4' );
