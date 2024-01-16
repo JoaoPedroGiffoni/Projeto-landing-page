@@ -1,0 +1,55 @@
+version: '3.7'
+
+# Networks
+networks:
+  # Internal network
+  internal:
+    driver: bridge
+    
+# Volumes
+volumes:
+  # MySQL volume
+  atratis-mysql_data:
+    driver: local
+
+# Services
+services:
+  # Nginx
+  atratis-nginx:
+    platform: linux/x86_64
+    image: webdevops/php-nginx:8.2
+    container_name: atratis-nginx
+    networks:
+      - internal
+    environment:
+      - WEB_DOCUMENT_ROOT=/var/www/app
+      - ATRATIS_MYSQL_HOST=atratis-mysql
+      - ATRATIS_MYSQL_DATABASE=${ATRATIS_MYSQL_DATABASE}
+      - ATRATIS_MYSQL_USER=${ATRATIS_MYSQL_USER}
+      - ATRATIS_MYSQL_PASSWORD=${ATRATIS_MYSQL_PASSWORD}
+    working_dir: /var/www/app
+    volumes:
+      - .:/var/www/app
+    ports:
+      - "80:80"
+    depends_on:
+      - atratis-mysql
+      
+  # MySQL
+  atratis-mysql:
+    platform: linux/x86_64
+    image: mysql:8
+    container_name: aratis-mysql
+    networks:
+      - internal
+    working_dir: /var/www/app
+    volumes:
+      - atratis-mysql_data:/var/lib/mysql
+      - .:/var/www/app
+    environment:
+      - ATRATIS_MYSQL_ROOT_PASSWORD=${ATRATIS_MYSQL_ROOT_PASSWORD}
+      - ATRATIS_MYSQL_DATABASE=${ATRATIS_MYSQL_DATABASE}
+      - ATRATIS_MYSQL_USER=${ATRATIS_MYSQL_USER}
+      - ATRATIS_MYSQL_PASSWORD=${ATRATIS_MYSQL_PASSWORD}
+    ports:
+      - "3306:3306"
